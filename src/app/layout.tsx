@@ -4,7 +4,6 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import SmoothScrolling from "@/components/Smooth-scrolling";
 import { Navbar } from "@/components/layout/navbar";
-import { AnnouncementBar } from "@/components/layout/announcement-bar";
 import { cn } from "@/lib/utils";
 import { DotPattern } from "@/components/magicui/dot-pattern";
 import { Footer } from "@/components/layout/footer";
@@ -41,7 +40,6 @@ export default function RootLayout({
                 />
               </div>
               <SmoothScrolling>
-                <AnnouncementBar />
                 <Navbar />
                 {children}
                 <Footer />

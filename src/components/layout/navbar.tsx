@@ -71,7 +71,7 @@ export function Navbar() {
 
   // Navbar container styles with transition
   const navbarContainerStyles = `fixed ${
-    isAtTop ? 'md:top-12 top-12' : '-top-2'
+    isAtTop ? 'md:top-0' : '-top-2'
   } left-0 right-0 z-40 transition-all duration-300 ease-in-out ${
     visible ? 'translate-y-0' : '-translate-y-full'
   }`;
@@ -118,10 +118,6 @@ export function Navbar() {
                 How it works
               </Link>
 
-              <Link href="#pricing" className="text-sm py-2 px-4 text-nowrap bg-foreground/5 hover:bg-foreground/10 transition-all duration-300 rounded-full">
-                Pricing
-              </Link>
-
               <Link href="#testimonials" className="text-sm py-2 px-4 text-nowrap bg-foreground/5 hover:bg-foreground/10 transition-all duration-300 rounded-full">
                 Testimonials
               </Link>
@@ -132,7 +128,7 @@ export function Navbar() {
           {/* Buttons - Right (Desktop) */}
           <div className="hidden md:flex items-center justify-end gap-4 ">
             <Button className="text-white rounded-full px-5 text-sm cursor-pointer" onClick={openContactForm}>
-              Get 10 Reviews Free
+              Start Giving Now
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
@@ -148,11 +144,6 @@ export function Navbar() {
                   className="p-3 text-lg font-medium text-center hover:bg-foreground/5 rounded-lg">
                   How it works
                 </Link>
-                <Link href="#pricing" 
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="p-3 text-lg font-medium text-center hover:bg-foreground/5 rounded-lg">
-                  Pricing
-                </Link>
                 <Link href="#testimonials"
                   onClick={() => setMobileMenuOpen(false)} 
                   className="p-3 text-lg font-medium text-center hover:bg-foreground/5 rounded-lg">
@@ -160,7 +151,7 @@ export function Navbar() {
                 </Link>
                 <div className="mt-4 pt-6 border-t">
                   <Button className="w-full text-white rounded-full px-5 py-6 text-base cursor-pointer" onClick={openContactForm}>
-                    Get 10 Reviews Free
+                    Start Giving Now
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                       </svg>

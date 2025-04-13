@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
-import { Star } from "lucide-react";
+import { Instagram, Phone, Mail, MessageSquare } from "lucide-react";
 import { useState } from "react";
 
 export function ContactForm() {
@@ -41,9 +41,6 @@ export function ContactForm() {
         message: "Thank you! We'll be in touch soon.",
       });
       form.reset();
-
-      // Open Calendly in new tab
-      window.open("https://calendly.com/rateourjob/30min", "_blank");
       
     } catch (error) {
       setSubmitStatus({
@@ -73,49 +70,51 @@ export function ContactForm() {
           >
             <div className="space-y-6">
               <h1 className="text-4xl font-bold">
-                More Reviews = More Traffic = More Customers
+                Contact Us – Let's Strengthen This Ummah Together
               </h1>
               <p className="text-xl text-muted-background">
-                It's simple math:
+                Need Help or Have Questions?
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               {[
                 {
-                  title: "More Reviews",
-                  description: "Google ranks you higher → More people see your business",
+                  icon: <Phone className="size-5" />,
+                  title: "Call",
+                  description: "+92 XXX XXXX",
                 },
                 {
-                  title: "More Visibility",
-                  description: "More clicks → More walk-ins, calls, and online bookings",
+                  icon: <Mail className="size-5" />, 
+                  title: "Email",
+                  description: "info@pathtoprospirity",
                 },
                 {
-                  title: "More Social Proof",
-                  description: "Less hesitation → More customers choosing YOU over competitors",
-                },
+                  icon: <Instagram className="size-5" />,
+                  title: "Instagram",
+                  description: "@pathtoprospirity",
+                  link: "https://www.instagram.com/pathtoprosperityyy"
+                }
               ].map((item, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-start gap-3"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="flex items-center gap-2"
                 >
-                  <Star className="size-6 text-primary flex-shrink-0 mt-1" />
+                  <div className="text-primary">{item.icon}</div>
                   <div>
-                    <h3 className="font-semibold text-xl">{item.title}</h3>
-                    <p className="text-muted-background">{item.description}</p>
+                    <h3 className="font-medium">{item.title}</h3>
+                    {item.link ? (
+                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-muted-background hover:text-primary">
+                        {item.description}
+                      </a>
+                    ) : (
+                      <p className="text-muted-background">{item.description}</p>
+                    )}
                   </div>
                 </motion.div>
               ))}
-            </div>
-
-            <div className="bg-primary/5 rounded-2xl px-6 py-5 border border-foreground/20 inline-block">
-              <p className="text-xl font-semibold text-primary">
-                Get Your First 10 Free Review Requests
-              </p>
             </div>
           </motion.div>
 
@@ -129,7 +128,7 @@ export function ContactForm() {
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name and Email Row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="gap-4">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium">
                     Name <span className="text-destructive">*</span>
@@ -137,6 +136,7 @@ export function ContactForm() {
                   <input
                     type="text"
                     id="name"
+                    name="name"
                     required
                     className="w-full px-4 py-2 rounded-lg border bg-background focus:ring-2 focus:ring-primary/50 outline-none transition-all"
                     placeholder="John Doe"
@@ -150,65 +150,26 @@ export function ContactForm() {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     required
                     className="w-full px-4 py-2 rounded-lg border bg-background focus:ring-2 focus:ring-primary/50 outline-none transition-all"
-                    placeholder="hsaeeb@example.com"
+                    placeholder="you@example.com"
                   />
                 </div>
-              </div>
-
-              {/* Phone and Business Name Row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label htmlFor="phone" className="text-sm font-medium">
-                    Phone Number <span className="text-destructive">*</span>
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    required
-                    className="w-full px-4 py-2 rounded-lg border bg-background focus:ring-2 focus:ring-primary/50 outline-none transition-all"
-                    placeholder="+1 (555) 000-0000"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="business" className="text-sm font-medium">
-                    Business Name <span className="text-destructive">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="business"
-                    required
-                    className="w-full px-4 py-2 rounded-lg border bg-background focus:ring-2 focus:ring-primary/50 outline-none transition-all"
-                    placeholder="Your Business Name"
-                  />
-                </div>
-              </div>
-
-              {/* Website */}
-              <div className="space-y-2">
-                <label htmlFor="website" className="text-sm font-medium">
-                  Business Website <span className="text-muted-fbackround">(optional)</span>
-                </label>
-                <input
-                  type="url"
-                  id="website"
-                  className="w-full px-4 py-2 rounded-lg border bg-background focus:ring-2 focus:ring-primary/50 outline-none transition-all"
-                  placeholder="https://example.com"
-                />
               </div>
 
               {/* Message */}
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-medium">
-                  Message <span className="text-muted-fbackround">(optional)</span>
+                  Message <span className="text-destructive">*</span>
                 </label>
                 <textarea
                   id="message"
-                  rows={3}
+                  name="message"
+                  required
+                  rows={4}
                   className="w-full px-4 py-2 rounded-lg border bg-background focus:ring-2 focus:ring-primary/50 outline-none transition-all resize-none"
-                  placeholder="Any additional information..."
+                  placeholder="How can we help you?"
                 />
               </div>
 
@@ -230,7 +191,7 @@ export function ContactForm() {
                 size="lg"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Sending..." : "Get Started Free"}
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </motion.div>
@@ -238,4 +199,4 @@ export function ContactForm() {
       </div>
     </section>
   );
-} 
+}

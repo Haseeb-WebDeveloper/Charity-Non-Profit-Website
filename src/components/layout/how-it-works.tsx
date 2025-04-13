@@ -16,35 +16,27 @@ import { usePopup } from "@/context/popup-context";
 
 const steps = [
   {
-    number: "01", 
-    title: "Schedule Your 20-Min Demo Call",
-    description: "We'll learn about your business and review goals.\nThen confirm exactly how we'll get you more 5-star ratings.",
-    image: "/steps/demo-call-step-1.jpg",
+    number: "01",
+    title: "Sign Up & Set Your Daily Amount",
+    description: "From ₹1 to any amount you choose. Change anytime.",
+    image: "/steps/signup-step-1.jpg",
     buttonText: "Start Now",
     buttonLink: "#contact"
   },
   {
-    number: "02",
-    title: "Seamless Same-Day Setup", 
-    description: "Our team handles onboarding in under 30 minutes.\nJust connect your customer list—we'll optimize everything.",
-    image: "/steps/Seamless-Onboarding-Process-step-2.jpg",
+    number: "02", 
+    title: "Securely Connect Your Payment",
+    description: "Bank account, Jazz Cash EasyPaisa, Fully encrypted.",
+    image: "/steps/payment-step-2.jpg",
     buttonText: "Start Now",
     buttonLink: "#contact"
   },
   {
     number: "03",
-    title: "Launch Your Free 14-Day Trial",
-    description: "Start collecting reviews immediately at zero cost.\nWatch your Google ranking climb as feedback pours in.",
-    image: "/steps/Start-Getting-Reviews-For-Free-step-3.jpg", 
+    title: "Automatic Daily Impact",
+    description: "Every morning at Fajr, your donation is sent to vetted Islamic charities.",
+    image: "/steps/impact-step-3.jpg",
     buttonText: "Start Now",
-    buttonLink: "#contact"
-  },
-  {
-    number: "04",
-    title: "Outrank Competitors & Get More Leads",
-    description: "Turn new reviews into inbound calls and messages.\nKeep growing with our automated reputation engine.",
-    image: "/steps/Outrank-Your-Competitors-step-4.jpg",
-    buttonText: "Start Now", 
     buttonLink: "#contact"
   }
 ];
