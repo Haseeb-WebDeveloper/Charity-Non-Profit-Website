@@ -8,11 +8,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePopup } from "@/context/popup-context";
+import { motion } from "motion/react";
 
 const steps = [
   {
