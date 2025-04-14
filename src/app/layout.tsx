@@ -11,8 +11,18 @@ import { PopupProvider } from "@/context/popup-context";
 import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
-  title: "Rate our job",
-  description: "Rate Our Job",
+  title: "Support Lives & Make an Impact | Charity Platform",
+  description: "Join us in making a difference. Donate, volunteer, or partner with us to support communities in need. 100% transparent and impact-driven charity platform.",
+  keywords: [
+    "donate to charity online",
+    "support local communities", 
+    "charity donation platform",
+    "nonprofit fundraising tools",
+    "volunteer opportunities",
+    "make an impact today",
+    "transparent donation platform",
+    "help people in need"
+  ]
 };
 
 export default function RootLayout({

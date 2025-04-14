@@ -83,10 +83,10 @@ export function Navbar() {
           {/* Logo - Left */}
           <div className="flex items-center justify-start pl-1 md:pl-3">
             <Link href="/" className="flex items-center gap-2">
-            <Image src="/logo.webp" alt="Rateourjob" width={100} height={100} className="w-10 h-10" />
-              <span className="flex items-center gap-2">
-                <span className="text-lg md:text-xl font-bold">RateOurJob</span>
-              </span>
+            <Image src="/logo.png" alt="Path To Prosperity" width={400} height={400} className="w-full h-8" />
+              {/* <span className="flex items-center gap-2">
+                <span className="text-lg md:text-xl font-bold">Path To Prosperity</span>
+              </span> */}
             </Link>
           </div>
 

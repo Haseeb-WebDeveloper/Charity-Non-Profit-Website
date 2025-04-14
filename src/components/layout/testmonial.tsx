@@ -35,7 +35,7 @@ const testimonials = [
 
 export function Testmonial() {
     return (
-        <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+        <section id="testimonials" className="py-16 bg-gradient-to-b from-gray-50 to-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -46,14 +46,14 @@ export function Testmonial() {
                     </p>
                 </div>
                 
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-xl mx-auto">
                     <Swiper
                         modules={[Pagination, Autoplay]}
                         spaceBetween={30}
-                        slidesPerView={2}
+                        slidesPerView={1}
                         pagination={{ clickable: true }}
                         autoplay={{
-                            delay: 5000,
+                            delay: 3000,
                             disableOnInteraction: false,
                         }}
                         loop={true}
@@ -61,7 +61,7 @@ export function Testmonial() {
                     >
                         {testimonials.map((testimonial, index) => (
                             <SwiperSlide key={index} className="h-auto">
-                                <div className="bg-white rounded-xl shadow-sm border border-foreground/20 p-8 md:p-10 mb-10 flex flex-col h-full">
+                                <div className="bg-white cursor-grab rounded-xl shadow-sm border border-foreground/20 p-8 md:p-10 mb-10 flex flex-col h-full">
                                     <div className="text-emerald-600 mb-6">
                                         <FaQuoteLeft size={36} />
                                     </div>

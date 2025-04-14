@@ -51,7 +51,7 @@ export async function POST(req: Request) {
           ${website ? `<li>Website: ${website}</li>` : ''}
           ${message ? `<li>Message: ${message}</li>` : ''}
         </ul>
-        <p>Best regards,<br>Rate Our Job Team</p>
+        <p>Best regards,<br>Path To Prosperity Team</p>
       `,
     });
 

@@ -51,7 +51,7 @@ export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
       setIsSubmitted(true);
 
       // Open Calendly in new tab and show success message
-      // window.open("https://calendly.com/rateourjob/30min", "_blank");
+      // window.open("https://calendly.com/Path To Prosperity/30min", "_blank");
 
     } catch (error) {
       setSubmitStatus({
@@ -90,29 +90,21 @@ export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
 
             {isSubmitted ? (
               <div className="text-center py-12">
-                <h2 className="text-2xl font-bold mb-4">Thanks for submitting the free trail access.</h2>
-                <p className="text-lg text-muted-foreground">
-                  You Need to Book a Free Demo Call. Please click here to{" "}
-                  <Link href="https://calendly.com/rateourjob/30min"
-                    target="_blank"
-                    className="text-primary underline"
-                  >book a free demo call with our team.</Link>
-                </p>
+                <h2 className="text-2xl font-bold mb-4">Thanks for your message</h2>
               </div>
             ) : (
               <>
                 {/* Form Header */}
                 <div className="mb-8 text-center">
-                  <h2 className="text-2xl font-bold mb-2">Get Started Free</h2>
-                  <p className="text-muted-foreground">
-                    Get Your First 10 Reviews Totally Free
+                  <h2 className="text-2xl font-bold mb-2">Start Giving Now</h2>
+                  <p className="text-muted-foreground max-w-sm mx-auto">
+                    Start giving to charity today and make a difference in the lives of others.
                   </p>
                 </div>
 
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name and Email Row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label htmlFor="name" className="text-sm font-medium">
                         Name <span className="text-destructive">*</span>
@@ -140,52 +132,7 @@ export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
                         placeholder="john@example.com"
                       />
                     </div>
-                  </div>
 
-                  {/* Phone and Business Name Row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label htmlFor="phone" className="text-sm font-medium">
-                        Phone Number <span className="text-destructive">*</span>
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        required
-                        className="w-full px-4 py-2 rounded-lg border bg-background focus:ring-2 focus:ring-primary/50 outline-none transition-all"
-                        placeholder="+1 (555) 000-0000"
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <label htmlFor="business" className="text-sm font-medium">
-                        Business Name <span className="text-destructive">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        id="business"
-                        name="business"
-                        required
-                        className="w-full px-4 py-2 rounded-lg border bg-background focus:ring-2 focus:ring-primary/50 outline-none transition-all"
-                        placeholder="Your Business Name"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Website */}
-                  <div className="space-y-2">
-                    <label htmlFor="website" className="text-sm font-medium">
-                      Business Website <span className="text-muted-foreground">(optional)</span>
-                    </label>
-                    <input
-                      type="url"
-                      id="website"
-                      name="website"
-                      className="w-full px-4 py-2 rounded-lg border bg-background focus:ring-2 focus:ring-primary/50 outline-none transition-all"
-                      placeholder="https://example.com"
-                    />
-                  </div>
 
                   {/* Message */}
                   <div className="space-y-2">

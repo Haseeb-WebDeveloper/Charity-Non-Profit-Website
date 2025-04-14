@@ -1,4 +1,4 @@
-# Rate Our Job
+# Path To Prosperity
 
 A modern web application built with Next.js for collecting and managing job reviews. The application features a sleek UI with animations, responsive design, and dark mode support.
 
